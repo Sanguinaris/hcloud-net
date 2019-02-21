@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hcloud-net", "hcloud-net\hcloud-net.csproj", "{094990CE-25E8-4F7E-8129-3D024A621812}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hcloud-net-tests", "hcloud-net-tests\hcloud-net-tests.csproj", "{FD83FB7C-42E3-4ED6-AF40-4B7E3B756B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{094990CE-25E8-4F7E-8129-3D024A621812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{094990CE-25E8-4F7E-8129-3D024A621812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{094990CE-25E8-4F7E-8129-3D024A621812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD83FB7C-42E3-4ED6-AF40-4B7E3B756B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD83FB7C-42E3-4ED6-AF40-4B7E3B756B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD83FB7C-42E3-4ED6-AF40-4B7E3B756B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD83FB7C-42E3-4ED6-AF40-4B7E3B756B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
