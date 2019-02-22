@@ -7,7 +7,7 @@ using Xunit;
 
 namespace hcloud_net_tests
 {
-    public class UnitTest1
+    public class ErrorTests
     {
         /// <summary>
         /// https://docs.hetzner.cloud/#overview-errors

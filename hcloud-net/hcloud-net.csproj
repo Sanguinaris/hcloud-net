@@ -5,8 +5,4 @@
     <RootNamespace>hcloud_net</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="API\Request\" />
-  </ItemGroup>
-
 </Project>
