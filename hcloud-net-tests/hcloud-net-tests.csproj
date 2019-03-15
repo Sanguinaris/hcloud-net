@@ -17,4 +17,8 @@
     <ProjectReference Include="..\hcloud-net\hcloud-net.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="API\Request\" />
+  </ItemGroup>
+
 </Project>

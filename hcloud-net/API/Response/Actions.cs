@@ -24,6 +24,7 @@ namespace hcloud_net.API.Request
         public string Type { get; set; }
     }
 
+    [DataContract]
     public class ActionError
     {
         /// <summary>
@@ -56,6 +57,12 @@ namespace hcloud_net.API.Request
         /// </summary>
         [DataMember(Name = "command")]
         public string Command { get; set; }
+
+        /// <summary>
+        /// The Command
+        /// </summary>
+        [DataMember(Name = "status")]
+        public string Status { get; set; }
 
         /// <summary>
         /// The Progress

@@ -323,7 +323,10 @@ namespace hcloud_net_tests.API.Request
           ""type"": ""server""
         }
       ],
-      ""error"": null
+      ""error"": {
+            ""code"": ""forbidden"",
+            ""message"": ""Insufficient permissions for this request""
+        }
     }
   ],
   ""meta"": {
@@ -346,6 +349,36 @@ namespace hcloud_net_tests.API.Request
 
             Assert.NotNull(error);
 
+            Assert.Equal(21, error.Actions.Length);
+
+            Assert.Equal(3091918, error.Actions[0].Id);
+            Assert.Equal("create_server", error.Actions[0].Command);
+            Assert.Equal("success", error.Actions[0].Status);
+            Assert.Equal(100, error.Actions[0].Progress);
+            Assert.Equal("2018-06-20T10:51:40+00:00", error.Actions[0].Started);
+            Assert.Equal("2018-06-20T10:51:54+00:00", error.Actions[0].Finished);
+
+            Assert.Single(error.Actions[0].Resources);
+            Assert.Equal(798217, error.Actions[0].Resources[0].Id);
+            Assert.Equal("server", error.Actions[0].Resources[0].Type);
+
+            Assert.Null(error.Actions[0].Error);
+
+
+            Assert.Equal(8628074, error.Actions[20].Id);
+            Assert.Equal("start_server", error.Actions[20].Command);
+            Assert.Equal("success", error.Actions[20].Status);
+            Assert.Equal(100, error.Actions[20].Progress);
+            Assert.Equal("2018-11-26T07:04:53+00:00", error.Actions[20].Started);
+            Assert.Equal("2018-11-26T07:06:18+00:00", error.Actions[20].Finished);
+
+            Assert.Single(error.Actions[20].Resources);
+            Assert.Equal(798217, error.Actions[20].Resources[0].Id);
+            Assert.Equal("server", error.Actions[20].Resources[0].Type);
+
+            Assert.NotNull(error.Actions[20].Error);
+            Assert.Equal("forbidden", error.Actions[20].Error.Code);
+            Assert.Equal("Insufficient permissions for this request", error.Actions[20].Error.Message);
         }
     }
 }
